@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	%svelte.head%
+</head>
+<body>
+	
+	<div id="vue-external-components-root">
+		<div id="svelte">
+			%svelte.body%
+		</div>
+	</div>
+
+	<!-- here you define your vue components -->
+	<script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
+	<script src="/vue-external-components-dist/Button.umd.min.js"></script>
+	<link rel="stylesheet" href="/vue-external-components-dist/Button.css">
+	<script>
+		window.addEventListener('sveltekit:start', () => {
+			new Vue({
+				components: {
+					VueExternalComponentButton: window.Button,
+				}
+			}).$mount('#vue-external-components-root')
+		})
+	</script>
+</body>
+</html>

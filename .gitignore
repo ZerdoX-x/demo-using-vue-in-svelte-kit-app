@@ -1,0 +1,6 @@
+/node_modules
+/build
+/.svelte-kit
+/static/vue-external-components-dist/*
+!/static/vue-external-components-dist/Button.umd.min.js
+!/static/vue-external-components-dist/Button.css

@@ -1,0 +1,21 @@
+{
+  "name": "demo-using-vue-in-svelte-kit-app",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "vue-external-components:button": "vue build --target lib --name Button --dest ./static/vue-external-components-dist ./src/vue-external-components/Button.vue"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.55",
+    "@sveltejs/kit": "next",
+    "@vue/cli": "^4.5.15",
+    "@vue/cli-service-global": "^3.4.0",
+    "svelte": "^3.42.6"
+  },
+  "type": "module",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}
